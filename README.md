@@ -1,16 +1,19 @@
 # coursera-daily-selfie-screencast
 Peer asignment screencast for "Programming Mobile Applications for Android Handheld Systems: Part 2" 
 
-I made a big mistake on my last submission
-  private void setUpList() {
+I made a big mistake on my last submission in DailySelfie.java:
+```java
+private void setUpList() {
     ((ListView) findViewById(R.id.selfies_list)).setAdapter(new SelfiesAdapter(this));
   }
+```
 should be replaced by:   
-  private void setUpList() {
+```java
+private void setUpList() {
     selfiesAdapter = new SelfiesAdapter(this);
     ((ListView) findViewById(R.id.selfies_list)).setAdapter(selfiesAdapter);
   }
-in DailySelfie.
+```
 
 It shows the different features of the app:
 * A click on the camera icon on the ActionBar open up a picture-taking app.
